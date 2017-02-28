@@ -1,6 +1,6 @@
 <?php
 /**
- * author: yidashi
+ * author: xxx
  * Date: 2015/12/25
  * Time: 11:53.
  */

@@ -11,7 +11,7 @@ use yii\web\NotFoundHttpException;
 
 /**
  * Created by PhpStorm.
- * User: yidashi
+ * User: xxx
  * Date: 16/5/20
  * Time: 下午2:58
  */

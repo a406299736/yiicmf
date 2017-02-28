@@ -6,11 +6,11 @@
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
-        "issues": "https://github.com/yidashi/yii2cmf/issues?state=open",
+        "issues": "https://github.com/xxx/yii2cmf/issues?state=open",
         "forum": "http://www.51siyuan.cn/suggest/",
         "wiki": "http://www.51siyuan.cn/wiki/",
         "irc": "irc://irc.freenode.net/yii",
-        "source": "https://github.com/yidashi/yii2cmf"
+        "source": "https://github.com/xxx/yii2cmf"
     },
     "minimum-stability": "stable",
     "require": {

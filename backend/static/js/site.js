@@ -1,5 +1,5 @@
 /**
- * Created by yidashi on 16/7/28.
+ * Created by xxx on 16/7/28.
  */
 $(document).ajaxError(function(event,xhr,options,exc){
     var message = xhr.responseJSON ? xhr.responseJSON.message : '操作失败';
