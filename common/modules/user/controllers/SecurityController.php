@@ -25,8 +25,12 @@ class SecurityController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout'],
+                //'only' => ['logout', 'login', 'captcha'],
                 'rules' => [
+                    [
+                        'actions' => ['login', 'captcha'],
+                        'allow' => true
+                    ],
                     [
                         'actions' => ['logout'],
                         'allow' => true,
@@ -39,6 +43,19 @@ class SecurityController extends Controller
                 'actions' => [
                     'logout' => ['post'],
                 ],
+            ],
+        ];
+    }
+
+    public function actions()
+    {
+        return [
+            'error' => [
+                'class' => 'yii\web\ErrorAction',
+            ],
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
     }

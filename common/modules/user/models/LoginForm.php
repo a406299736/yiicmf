@@ -28,6 +28,7 @@ class LoginForm extends Model
             ['rememberMe', 'boolean'],
             // password is validated by validatePassword()
             ['password', 'validatePassword'],
+            ['verifyCode', 'captcha', 'captchaAction' => 'user/security/captcha'],
         ];
     }
     public function attributeLabels()
@@ -36,6 +37,7 @@ class LoginForm extends Model
             'username' => '用户名/邮箱',
             'password' => '密码',
             'rememberMe' => '记住我',
+            'verifyCode' => ''
         ];
     }
     /**
