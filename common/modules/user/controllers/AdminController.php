@@ -39,6 +39,7 @@ class AdminController extends Controller
             ],
         ];
     }
+
     public function actionLogin()
     {
         $this->layout = '@common/modules/user/views/admin/main-login.php';

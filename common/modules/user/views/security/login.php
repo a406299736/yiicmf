@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <div class="clearfix"></div><br>
 
                 <div class="input-group input-group-lg">
-                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil red"></i></span>
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-check red"></i></span>
                     <?= Html::input('text', 'LoginForm[verifyCode]', $model->verifyCode, ['class' => 'form-control', 'id' => 'loginform-verifycode', 'placeholder' => '请输入验证码', 'style' => 'width: 270px;'])?>
                     <?= \yii\captcha\Captcha::widget([
                         'name' => 'captchaimg',
