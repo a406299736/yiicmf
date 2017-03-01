@@ -11,12 +11,38 @@ namespace common\modules\user\controllers;
 
 use common\modules\user\models\SignupForm;
 use Yii;
+use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\widgets\ActiveForm;
 
 class RegistrationController extends Controller
 {
+    public function behaviors()
+    {
+        return [
+            'access' => [
+                'class' => AccessControl::className(),
+                'rules' => [
+                    [
+                        'actions' => ['signup', 'captcha'],
+                        'allow' => true
+                    ]
+                ],
+            ]
+        ];
+    }
+
+    public function actions()
+    {
+        return [
+            'captcha' => [
+                'class' => 'yii\captcha\CaptchaAction',
+                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+            ]
+        ];
+    }
+
     /**
      * Signs user up.
      *

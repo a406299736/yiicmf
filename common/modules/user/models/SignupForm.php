@@ -12,6 +12,7 @@ class SignupForm extends Model
     public $username;
     public $email;
     public $password;
+    public $verifyCode;
 
     /**
      * {@inheritdoc}
@@ -32,6 +33,7 @@ class SignupForm extends Model
 
             ['password', 'required'],
             ['password', 'string', 'min' => 6],
+            ['verifyCode', 'captcha', 'captchaAction' => 'user/registration/captcha']
         ];
     }
     public function attributeLabels()
@@ -40,6 +42,7 @@ class SignupForm extends Model
             'username' => '用户名',
             'email' => '邮箱',
             'password' => '密码',
+            'verifyCode' => ''
         ];
     }
     /**
