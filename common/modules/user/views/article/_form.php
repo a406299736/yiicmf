@@ -29,7 +29,7 @@ use yii\widgets\ActiveForm;
 
     </div>
     <div class="col-lg-3">
-        <?= $form->field($model, 'cover')->widget(\common\widgets\upload\SingleWidget::className()) ?>
+        <?= $form->field($model, 'cover', ['options' => ['onclick' => 'cli()']])->widget(\common\widgets\upload\SingleWidget::className()) ?>
 
         <?= $form->field($model, TagBehavior::$formName)->label(TagBehavior::$formLable)->widget(\common\widgets\tag\TagsInput::className())?>
         <div class="form-group">
@@ -39,3 +39,9 @@ use yii\widgets\ActiveForm;
     <?php ActiveForm::end(); ?>
 
 </div>
+
+<script>
+    function cli() {
+        alert('封面上传功能暂未开启!敬请期待');
+    }
+</script>

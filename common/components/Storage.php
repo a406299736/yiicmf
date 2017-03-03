@@ -15,6 +15,7 @@ use yii\base\Component;
 class Storage extends Component
 {
     public $baseUrl;
+    public $baseDir;
 
     /**
      * @var array|string|Filesystem
@@ -25,6 +26,7 @@ class Storage extends Component
     {
         parent::init();
         $this->baseUrl = \Yii::getAlias($this->baseUrl);
+        $this->baseDir = \Yii::getAlias($this->baseDir);
         $this->fs = \Yii::createObject($this->fs);
     }
 

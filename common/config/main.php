@@ -67,7 +67,8 @@ return [
                 'bucket' => 'aiyo',
             ],
             //'baseUrl' => '@storageUrl/upload'
-            'baseUrl' => '@storageUrl/upload'
+            'baseDir' => '@webroot',
+            'baseUrl' => 'http://7xk1ho.com1.z0.glb.clouddn.com',
         ],
         'log' => [
             'targets' => [
