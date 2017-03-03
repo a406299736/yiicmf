@@ -68,7 +68,7 @@ return [
             ],
             //'baseUrl' => '@storageUrl/upload'
             'baseDir' => '@webroot',
-            'baseUrl' => 'http://7xk1ho.com1.z0.glb.clouddn.com',
+            'baseUrl' => '',
         ],
         'log' => [
             'targets' => [
