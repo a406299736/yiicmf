@@ -39,7 +39,8 @@
         "bower-asset/font-awesome": "^4.0",
         "bower-asset/editor.md": "*",
         "creocoder/yii2-flysystem": "*",
-        "qiniu/php-sdk": "^7.1"
+        "qiniu/php-sdk": "^7.1",
+        "php-curl-class/php-curl-class": ">=7.0.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",

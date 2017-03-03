@@ -142,6 +142,7 @@ class UploadAction extends Action
                          */
                         $attachment = new $this->modelClass;
                         $attachment->path = $filePath;
+                        $attachment->url = Yii::$app->storage->baseUrl . '/' . $filePath;
                         $attachment->name = $file->name;
                         $attachment->extension = $file->extension;
                         $attachment->type = $file->type;
@@ -154,7 +155,7 @@ class UploadAction extends Action
                 }
                 $result = [
                     'id' => $attachment->id,
-                    'url' => $attachment->getUrl(),
+                    'url' => Yii::$app->storage->baseUrl . '/' . $attachment->path,
                     'extension' => $attachment->extension,
                     'type' => $attachment->type,
                     'size' => $attachment->size,

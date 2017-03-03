@@ -56,15 +56,18 @@ class SettingsController extends Controller
             $w = Yii::$app->getRequest()->post("w");
             $h = Yii::$app->getRequest()->post("h");
             $attachment = Attachment::findOne($avatar);
-            $original= $attachment->filePath;
-            $fileInfo = pathinfo($original);
-            $target = $fileInfo['dirname'] . '/' . $fileInfo['filename'] . '_avatar.' . $fileInfo['extension'];
-            Image::crop($original, $w, $h, [
+            $original= $attachment->getUrl();
+            //$fileInfo = pathinfo($original);
+            //$target = $fileInfo['dirname'] . '/' . $fileInfo['filename'] . '.' . $fileInfo['extension'];
+            $fileData = file_get_contents($original);
+            $target = Yii::$app->storage->baseDir . '/storage/upload/' . $attachment->path;
+            file_put_contents($target, $fileData);
+            Image::crop($target, $w, $h, [
                 $x,
                 $y
             ])->save($target);
-            $targetUrl = Yii::$app->storage->path2url($target);
-            $user->saveAvatar($targetUrl);
+            //$targetUrl = Yii::$app->storage->path2url($target);
+            $user->saveAvatar(Yii::$app->request->hostInfo . '/storage/upload/' . $attachment->path);
 
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             $result = [

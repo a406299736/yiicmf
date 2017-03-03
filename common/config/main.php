@@ -62,12 +62,13 @@ return [
                 //'class' => 'creocoder\flysystem\LocalFilesystem',
                 //'path' => '@storagePath/upload',
                 'class' => 'common\\components\\flysystem\\QiniuFilesystem',
-                'access' => 'JQ7oUE9xpEgr2ysJ2yI6lvQ6vbtwUADQP4mZJeEm',
-                'secret' => 'rhH-exIwtiaPN17505wgR-G4tHxAgFd8Izg1WIJQ',
-                'bucket' => 'aiyo',
+                'access' => '',
+                'secret' => '',
+                'bucket' => '',
             ],
             //'baseUrl' => '@storageUrl/upload'
-            'baseUrl' => '@storageUrl/upload'
+            'baseDir' => '@webroot',
+            'baseUrl' => 'http://7xk1ho.com1.z0.glb.clouddn.com',
         ],
         'log' => [
             'targets' => [
