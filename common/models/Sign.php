@@ -53,7 +53,7 @@ class Sign extends \yii\db\ActiveRecord
     public function behaviors()
     {
         return [
-            UserBehavior::class,
+            UserBehavior::className(),
             [
                 'class' => UserBehaviorBehavior::className(),
                 'eventName' => [self::EVENT_AFTER_UPDATE, self::EVENT_AFTER_INSERT],
